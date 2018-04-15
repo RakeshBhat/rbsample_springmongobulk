@@ -1,0 +1,19 @@
+[{
+	"id":123456789,
+	"name":"books",
+	"price":200,
+	"category":1
+},
+{
+	"id":123456780,
+	"name":"cups",
+	"price":20,
+	"category":4
+},
+{
+	"id":123456781,
+	"name":"shoe",
+	"price":300,
+	"category":7
+}
+]
