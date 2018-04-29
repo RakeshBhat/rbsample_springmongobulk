@@ -2,18 +2,49 @@
 	"id":123456789,
 	"name":"books",
 	"price":200,
-	"category":1
+	"category":1,
+	"supplier":"Safari"
 },
 {
 	"id":123456780,
 	"name":"cups",
 	"price":20,
-	"category":4
+	"category":4,
+	"supplier":"Robin"
 },
 {
 	"id":123456781,
 	"name":"shoe",
 	"price":300,
-	"category":7
+	"category":7,
+	"supplier":"Mato"
+},
+{
+	"id":123456782,
+	"name":"snake",
+	"price":200,
+	"category":7,
+	"supplier":"Jomo"
+},
+{
+	"id":123456783,
+	"name":"sand",
+	"price":30,
+	"category":7,
+	"supplier":"Mati"
+},
+{
+	"id":123456784,
+	"name":"socks",
+	"price":100,
+	"category":7,
+	"supplier":"Boots"
+},
+{
+	"id":123456785,
+	"name":"chocolate",
+	"price":350,
+	"category":5,
+	"supplier":"Mars"
 }
 ]

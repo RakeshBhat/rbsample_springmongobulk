@@ -27,16 +27,31 @@ public class ProductController {
 		return ResponseEntity.ok("");		
 	}
 	
-	@GetMapping("/product/{productId}")
+	@GetMapping("/product/id/{productId}")
 	public ResponseEntity<?> getProduct(@PathVariable Long productId){
 		
 		return ResponseEntity.ok(productService.getProductById(productId));
 				
 	}
 	
+	@GetMapping("/product/category/{category}")
+	public ResponseEntity<?> getProductByCategory(@PathVariable int category){
+		return ResponseEntity.ok(productService.getProductsByCatergory(category));
+	}
+	
+	@GetMapping("/product/costly/{price}")
+	public ResponseEntity<?> getCostlyProducts(@PathVariable double price){
+		return ResponseEntity.ok(productService.getTop3ExpensiveProducts(price));
+	}
+	
 	@DeleteMapping("/product/{id}")
 	public ResponseEntity<?> deleteProducts(@PathVariable Long productId){
 		
 		return ResponseEntity.ok("");		
+	}
+	
+	@GetMapping("/product/supplier/{supplier}")
+	public ResponseEntity<?> getProductsBySupplier(@PathVariable String supplier){
+		return ResponseEntity.ok(productService.getProductBySupplier(supplier));
 	}
 }

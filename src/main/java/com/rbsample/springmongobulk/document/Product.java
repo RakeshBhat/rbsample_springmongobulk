@@ -1,6 +1,8 @@
 package com.rbsample.springmongobulk.document;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.index.Indexed;
+import org.springframework.data.mongodb.core.index.TextIndexed;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 /*MongoDB stores data in collections. Spring Data MongoDB will map the class Customer 
@@ -11,10 +13,15 @@ you can use Spring Data MongoDB’s @Document annotation on the class.
 public class Product {
 
 	@Id
-	long id;
+	long id;	
+	@Indexed(background=true)
 	String name;
+	@Indexed()
 	double price;
 	int category;
+	@TextIndexed(weight=1)
+	String supplier;
+	
 	public long getId() {
 		return id;
 	}
@@ -39,9 +46,16 @@ public class Product {
 	public void setCategory(int category) {
 		this.category = category;
 	}
+	public String getSupplier() {
+		return supplier;
+	}
+	public void setSupplier(String supplier) {
+		this.supplier = supplier;
+	}
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", name=" + name + ", price=" + price + ", category=" + category + "]";
+		return String.format("Product [id=%s, name=%s, price=%s, category=%s, supplier=%s]", id, name, price, category,
+				supplier);
 	}
 	
 	

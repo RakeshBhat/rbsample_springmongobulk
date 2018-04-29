@@ -2,4 +2,14 @@
 - bulk insert using mongo template
 - fail bulk ops of insert if any of insertions failed
 - succeed bulk ops insert if any of insertions failed, but send failed insertion ids
-- write custom bulk ops 
+- write custom bulk ops
+- mongoTemplate usage
+- Query usage
+- Query with Criteria usage
+- Query with Criteria 
+	- regex
+	- where
+	- lt/gt
+	- sort
+	- pageble
+- different variation of Indexes 
